@@ -9,9 +9,9 @@
         <div class="footer-column">
           <ul class="footer-nav">
             <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Credit Program</a></li>
-            <li><a href="#">Public Notice</a></li>
+            <li><a href="<?php echo site_url('/warranty');?>">Warranty</a></li>
+            <li><a href="<?php echo site_url('/credit-program');?>">Credit Program</a></li>
+            <li><a href="<?php echo site_url('/public-notice');?>">Public Notice</a></li>
           </ul>
         </div>
       </div>

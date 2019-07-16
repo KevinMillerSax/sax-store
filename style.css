@@ -4,15 +4,18 @@ Author: Kevin Miller
 Version: 1.0
 */
 
+
+
 body {
   margin: 0;
   color: white;
   font-family: 'Barlow Condensed', sans-serif;  
-  background-color: black;
+	background-color: black;
 }
 
 p {
-  margin: 0;
+	margin: 0;
+	
 }
 
 a {
@@ -24,10 +27,30 @@ a:hover {
   text-decoration: underline;
 }
 
+.active {
+	text-decoration-line: underline;
+}
+
 .content-container {
   margin: 5vh 12vw 10vh 12vw;
   font-size: 1.5rem;
 }
+
+.contestant-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.contestant-image-content {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.contestant-image {
+	object-fit: cover;
+}
+
 .footer {
 	align-items: center;
 }
@@ -47,6 +70,42 @@ a:hover {
 
 .footer-nav {
 	list-style: none;
+}
+
+.giveaway-buttons {
+	display:flex;
+	justify-content: space-between;
+}
+
+.giveaway-content-email {
+	display:flex;
+	flex-direction: column;
+}
+
+.giveaway-image {
+	padding-right: 5vw;
+}
+
+.giveaway-image-content {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 7vw;
+}
+.giveaway-excerpt-button {
+	display: flex;
+	flex-direction: column;
+}
+
+.giveaway-excerpt-button > a {
+	margin-top: 5vh;
+	width: 6vw;
+	text-align: center;
+}
+.giveaway-title-date {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
 }
 
 
