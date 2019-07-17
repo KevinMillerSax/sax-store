@@ -18,6 +18,9 @@
           <li <?php if(is_page('about')) echo 'class="active"';?>><a href="<?php echo site_url('/about'); ?>">About</li> </a>
           <li <?php if(is_page('contact')) echo 'class="active"';?>><a href="<?php echo site_url('/contact'); ?>">Contact</li> </a>
           <li <?php if(is_page('giveaways') OR get_post_type()=='giveaway' OR is_page('winners') OR is_page('past-giveaways')) echo 'class="active"';?>><a href="<?php echo site_url('/giveaways'); ?>">Giveaways</li> </a>
+          <li id="cart" <?php if(is_page('cart')) echo 'class="active"';?>><a href="<?php echo site_url('cart');?>">Cart</a></li>
+          
+          
         </ul>
       </nav>
     </div>

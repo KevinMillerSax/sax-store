@@ -25,7 +25,8 @@
 
 
 <div class="single-page-banner" style="background-image: url(<?php echo get_theme_file_uri('images/sax-banner3.jpg');?>)">
-    <h1> <?php echo get_the_title();?> </h1>
+
+<h1> <?php echo get_the_title();?> </h1>
   </div>
   <div class="content-container"> 
     <h2>Giveaway Ends On: <?php echo $eventDate->format('M j, Y'); ?> </h2> 

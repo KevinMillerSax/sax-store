@@ -31,6 +31,12 @@ a:hover {
 	text-decoration-line: underline;
 }
 
+#cart :before {
+	font-family: "dashicons";
+	content: "\f174";
+
+}
+
 .content-container {
   margin: 5vh 12vw 10vh 12vw;
   font-size: 1.5rem;
@@ -145,6 +151,7 @@ header div {
   padding: 20px;
   font-size: 30px;
 }
+
 
 /* button generator */
 .myButton {
