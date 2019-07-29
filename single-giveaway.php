@@ -62,7 +62,9 @@
     while($relatedContestants->have_posts()) {
       $relatedContestants->the_post(); ?>
         <div class="contestant-card">
-          <h3><?php the_title(); ?></h3>
+          <div class="contestant-card-header">
+            <h2><?php the_title(); ?></h2>
+          </div>
           <div class="contestant-image-content">
             <img class="contestant-image" src="<?php the_post_thumbnail_url('contestant-photo');?>">
             <p><?php the_content(); ?></p>

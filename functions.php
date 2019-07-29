@@ -20,12 +20,15 @@ function pageBanner($args = NULL) {
 
 function kenny_files() {
   wp_enqueue_script('kenny-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, '1.0', true);
-  wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
+  wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
   wp_enqueue_style('google-font-two', '//fonts.googleapis.com/css?family=PT+Sans&display=swap');
-
   wp_enqueue_style('kenny_main_style', get_stylesheet_uri());
+  wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.7.2/css/all.css');
 }
 add_action('wp_enqueue_scripts', 'kenny_files');
+
+
+
 
 
 function kenny_features() {
@@ -34,6 +37,7 @@ function kenny_features() {
   add_theme_support('post-thumbnails');
   add_image_size('contestant-photo', 400, 500, false);
   add_image_size('page-banner', 1500, 350, true);
+  
 }
 add_action('after_setup_theme', 'kenny_features');
 

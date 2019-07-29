@@ -7,7 +7,10 @@ while(have_posts()) {
 
   <?php pageBanner(); ?>
 
-  <div class="content-container"> <?php the_content();?> 
+  <div class="content-container"> 
+    <div class="giveaway-card">
+      <?php the_content();?> 
+    </div>
   </div>
 
 <?php } ?>

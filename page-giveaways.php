@@ -27,24 +27,26 @@
       $giveaways->the_post(); ?>
 
       <!-- format the html and data below -->
-      <div class="giveaway-title-date">
-        <h2><?php the_title();?> </h2>
-        <h4> End Date: <?php 
-          $giveawayDate = new DateTime(get_field('giveaway_date'));
-          echo $giveawayDate->format('M'); echo ' ';
-          echo $giveawayDate->format('d'); echo ', ';
-          echo $giveawayDate->format('Y');
-        ?>
-        </h4>
-      </div>
-      <div class="giveaway-excerpt-button">
-        <?php if(has_excerpt()) {
-          echo get_the_excerpt();
-        } else {
-          echo wp_trim_words(get_the_content(), 25); 
-        }?>
-          
-        <a class="myButton" href="<?php the_permalink();?>"> More Info </a>
+      <div class="giveaway-card">
+        <div class="giveaway-title-date">
+          <h2><?php the_title();?> </h2>
+          <h4> End Date: <?php 
+            $giveawayDate = new DateTime(get_field('giveaway_date'));
+            echo $giveawayDate->format('M'); echo ' ';
+            echo $giveawayDate->format('d'); echo ', ';
+            echo $giveawayDate->format('Y');
+          ?>
+          </h4>
+        </div>
+        <div class="giveaway-excerpt-button">
+          <?php if(has_excerpt()) {
+            echo get_the_excerpt();
+          } else {
+            echo wp_trim_words(get_the_content(), 25); 
+          }?>
+            
+          <a class="myButton" href="<?php the_permalink();?>"> More Info </a>
+        </div>
       </div>
       <hr>
 
