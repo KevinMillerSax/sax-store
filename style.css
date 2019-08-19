@@ -55,10 +55,45 @@ h2 {
 	width: 30vw;	
 }
 
+
 #cart :before {
 	font-family: "dashicons";
 	content: "\f174";
 }
+
+.carticon :before {
+	font-family: "dashicons";
+	content: "\f174";
+	}
+
+.catalogs {
+	display:flex;
+	justify-content: space-between;
+	/* align-content: center; */
+}
+
+.catalog-left {
+	display: flex;
+	justify-content: center;
+	width: 50vw;
+}
+
+.catalog-left img {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.catalog-right {
+	display: flex;
+	justify-content: center;
+	width: 50vw;
+}
+
+.catalog-right img {
+	width: 80%;	
+	margin: 0 auto;
+}
+
 
 .content-container {
   margin: 5vh 12vw 10vh 12vw;
@@ -98,6 +133,20 @@ h2 {
 
 }
 
+.menu-main-menu-container > ul {
+  list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	padding-inline-start: 0px;
+  
+}
+
+.menu-main-menu-container > ul > li {
+	padding-right: 3vw;
+	font-size: 1.5vw;
+	font-family: 'Darker Grotesque', sans-serif;
+}
+
 .footer {
 	align-items: center;
 }
@@ -124,6 +173,7 @@ h2 {
 .giveaway-buttons {
 	display:flex;
 	justify-content: space-between;
+	padding-bottom: 5vh;
 }
 .giveaway-card {
 	border-radius: 4px;
@@ -164,23 +214,26 @@ h2 {
 
 
 header {
-  background-color: rgb(44,37, 29);
-  position: fixed;
-  position: -webkit-sticky;
-  position: sticky;
+	background-color: rgb(44,37, 29);
+	position:relative;
+  /* position: fixed; */
+  /* position: -webkit-sticky; */
+	/* position: sticky; */
+	
+	
   top: 0;
-  z-index: 1000;
+  z-index: 1000; 
   width: 100%;
-	height: 120px; 
+	height: 160px; 
 	box-shadow: 1px 1px 20px 3px rgb(44,37, 29);
-  
 }
+
+
 
 header div {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
- 
 }
 
 header div h1 {
@@ -193,6 +246,7 @@ header div h1 {
   flex-direction: column;
   margin-left: 3vw;
 }
+
 
 .main-navigation > ul {
   list-style: none;
@@ -207,6 +261,13 @@ header div h1 {
 	font-family: 'Darker Grotesque', sans-serif;
 }
 
+.media-front-video {
+	display: none;
+}
+
+.mobile-header {
+	display: none;
+}
 
 /* button generator */
 .myButton {
@@ -256,24 +317,8 @@ header div h1 {
 /* end my button */
 
 
-.page-banner {
-  padding: 80px 0 40px 0;
-  position: relative;
-	height: 250px;
-}
-
-.page-banner h3{
-	font-size: calc(45px + 6 * ((100vw - 320px) / 680));
-
-  text-shadow: 3px 3px black;
-
- }
-.page-banner__content {
-  text-align: center;
-}
-
 .search-nav {
-	padding-top: 1vh;
+	padding-top: 4vh;
 	display: flex;
 	flex-direction: column;
 	
@@ -301,47 +346,42 @@ header div h1 {
 	font-size: 4.5vw;
 }
 
-.slider {
-	margin: 0 auto;
-}
-
-.split-view {
-  display:flex;
-  margin-top: 40px;
-}
-
-.split-left {
+.video-container {
+	padding: 30px;
 	display: flex;
 	flex-direction: column;
-	background-color: black;
-	width: 50vw;
-  justify-content: flex-start; 
+	justify-content: center;
 	align-items: center;
-}
-
-.split-left > p {
-  font-size: 40px;
-}
-
-.split-right {
-	width: 50vw;
-}
-
-.split-right img {
-	height: 100%;
-	width: 100%;
+	position: relative;
+	
 }
 
 
 
 /* woocommerce css below  */
 
+.woocommerce .products ul, .woocommerce ul.products li {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}
+
+#tab-title-description{
+	color: black;
+	font-size: 20px;
+	font-family: 'Darker Grotesque', sans-serif;
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li  {
 	color: rgb(44,37, 29);
 }
 
 .woocommerce div.product p.price, .woocommerce div.product span.price {
-	color: black;
+	color: white;
+	font-size: 24px;
+	text-shadow: -0.2px 0px black;
 }
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
@@ -391,6 +431,11 @@ header div h1 {
 .flex-control-nav {
 	display: flex;
 	justify-content: space-around;
+	border-radius: 4px;
+	padding: 15px; 
+	background-color: rgba(44,37, 29, 0.52);
+	box-shadow: 4px 4px 8px 2px rgba(49, 25, 15, 0.3);
+	margin-bottom: 5vh;
 }
 
 .woocommerce table.shop_table {
@@ -449,4 +494,180 @@ thead {
 
 .select2-results__options {
 	color: black;
+}
+
+/* front page slider  */
+
+@keyframes fader {
+	0%{background: url(images/kandinsky.jpeg); background-size:cover;}
+	50%{background: url(images/kandinsky2.jpg); background-size:cover;}
+	100%{background: url(images/kandinsky.jpeg); background-size:cover;}
+}
+
+
+.page-banner {
+	/* margin: 0 auto;
+	padding: 80px 0 40px 0;
+	position: relative; */
+	
+	height: 350px;
+	
+	
+}
+
+.page-banner__content {
+	text-align: center;
+	height: 350px;
+	animation: fader 10s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+
+.page-banner h3{
+	font-size: calc(40px + 6 * ((100vw - 320px) / 680));
+	text-shadow: 3px 3px black;
+	padding-top: 70px;
+	margin-top: 0;
+	margin-bottom: 0;
+ }
+
+/* text wrapping */
+
+.alto {
+	float:left;
+	clip-path: polygon(21px 69px,2px 719px,113px 718px,170px 682px,202px 455px,221px 444px,246px 435px,248px 408px,218px 378px,186px 353px,127px 341px,104px 116px,117px 97px,112px 86px,101px 81px,102px 56px,90px 16px,50px 1px);
+
+	shape-outside: polygon(21px 69px,2px 719px,113px 718px,170px 682px,202px 455px,221px 444px,246px 435px,248px 408px,218px 378px,186px 353px,127px 341px,104px 116px,117px 97px,112px 86px,101px 81px,102px 56px,90px 16px,50px 1px);
+
+}
+
+.soprano {
+	float:left;
+	clip-path: polygon(1px 3px,3px 62px,97px 156px,98px 184px,126px 201px,195px 245px,240px 286px,261px 347px,348px 383px,369px 377px,542px 546px,537px 580px,558px 591px,639px 512px,656px 473px,616px 473px,586px 441px,573px 405px,472px 315px,427px 301px,276px 173px,258px 139px,210px 126px,238px 74px,203px 39px,155px 40px,127px 41px,119px 20px,97px 15px,84px 1px);
+	shape-outside: polygon(1px 3px,3px 62px,97px 156px,98px 184px,126px 201px,195px 245px,240px 286px,261px 347px,348px 383px,369px 377px,542px 546px,537px 580px,558px 591px,639px 512px,656px 473px,616px 473px,586px 441px,573px 405px,472px 315px,427px 301px,276px 173px,258px 139px,210px 126px,238px 74px,203px 39px,155px 40px,127px 41px,119px 20px,97px 15px,84px 1px);
+
+}
+
+@media(max-width: 600px) {
+	p {
+		font-size: 11px;
+	}
+
+	h1 {
+		font-size: 25px;
+	}
+	
+	h2 {
+		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+	}
+	
+	#burger-nav{
+		display:block;
+		padding-top: 5px;
+		/* width: 100%; */
+		cursor: pointer;	
+	}
+
+	.catalogs {
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		/* align-content: center; */
+	}
+
+	.catalog-left {
+		display: flex;
+		justify-content: center;
+		width: 98vw;
+		margin-bottom: 20px;
+	}
+	.catalog-right {
+		display: flex;
+		justify-content: center;
+		width: 98vw;
+	}
+	#drop-menu {
+		display: none;
+		width: 100%;
+	}
+
+	.menu-main-menu-container {
+		display:block;
+		width: 100%;
+	}
+	.menu-main-menu-container > ul {
+		margin-top: 0;
+		display: block;
+		background: rgb(44,37, 29);
+		/* height: 0; */
+		overflow: hidden;
+	}
+	
+	.menu-main-menu-container > ul > li {
+		padding-right: 0;
+		font-size: 25px;
+		padding: 7px;
+		font-family: 'Darker Grotesque', sans-serif;
+		border-bottom: 2px solid grey;
+		width: 100%;
+	}
+	
+	.page-banner {
+		height: 150px;
+		width:100%;
+	}
+	.page-banner__content {
+		text-align: center;
+		height: 150px;
+		animation: fader 10s cubic-bezier(1, 0, 0, 1) infinite;
+	}
+	
+	
+	.page-banner h3{
+		font-size: calc(21px + 6 * ((100vw - 320px) / 680));
+		text-shadow: 3px 3px black;
+		padding-top: 10px;
+		margin:0;
+	 }
+
+	 .page-banner a {
+		 width: 50vw;
+		 height: 3vh;
+		 font-size: 25px;
+		 margin-top: 0;
+		 
+	 }
+
+	 .media-front-video {
+		padding: 7px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	 }
+
+	 .mobile-header {
+		 display: flex;
+		 flex-direction: column;
+		 align-items: center;
+		 height: 15vh;
+	 }
+
+	 .mobile-header h1 {
+		 text-align: center;
+		 margin:0;
+	 }
+
+	 .aws-container .aws-search-field {
+		 width: 80vw;
+	 }
+	
+	 .navbar{
+		 display:none;
+	 }
+
+	 .video-container {
+		 display:none;
+	 }
 }

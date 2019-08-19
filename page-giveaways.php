@@ -8,7 +8,7 @@
     <?php
     $today = date('Ymd');
     $giveaways = new WP_Query(array(
-      'posts_per_page' => 3,
+      'posts_per_page' => -1,
       'post_type' => 'giveaway',
       'meta_key' => 'giveaway_date',
       'orderby' => 'meta_value_num',
@@ -22,10 +22,17 @@
         )
       ),
     ));
+    ?>
 
+    <div class="giveaway-buttons">
+        <a class="myButton" href="<?php echo site_url('winners');?>">Click Here to See Our Winners</a>
+        <a class="myButton" href="<?php echo site_url('past-giveaways')?>"> Click Here to See Our Past Giveaways</a>
+    </div>
+
+    <?php
     while($giveaways->have_posts()) {
       $giveaways->the_post(); ?>
-
+      
       <!-- format the html and data below -->
       <div class="giveaway-card">
         <div class="giveaway-title-date">
@@ -51,11 +58,36 @@
       <hr>
 
     <?php }
+    wp_reset_postdata();
     ?>
-    <div class="giveaway-buttons">
-      <a class="myButton" href="<?php echo site_url('past-giveaways')?>"> Click Here to See Our Past Giveaways</a>
-      <a class="myButton" href="<?php echo site_url('winners');?>">Click Here to See Some of Our Winners</a>
-    </div>
+
+<h2> Our Contestants: </h2>
+    <?php
+    $relatedContestants = new WP_Query(array(
+      'paged' => get_query_var('paged', 1),
+      'posts_per_page' => 8,
+      'post_type' => 'contestant',
+      'orderby' => 'title',
+      'order' => 'date',
+    ));
+   
+    while($relatedContestants->have_posts()) {
+      $relatedContestants->the_post(); ?>
+        <div class="contestant-card">
+          <div class="contestant-card-header">
+            <h2><?php the_title(); ?></h2>
+          </div>
+          <div class="contestant-image-content">
+            <img class="contestant-image" src="<?php the_post_thumbnail_url('contestant-photo');?>">
+            <p><?php the_content(); ?></p>
+          </div>
+        </div>
+    <?php }
+   echo paginate_links(array(
+    'total' => $relatedContestants->max_num_pages
+));
+    ?>
+    
   </div>
 
 

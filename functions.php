@@ -19,7 +19,7 @@ function pageBanner($args = NULL) {
 
 
 function kenny_files() {
-  wp_enqueue_script('kenny-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, '1.0', true);
+  wp_enqueue_script('kenny-js', get_theme_file_uri('/js/scripts-bundled.js'),  array('jquery'), NULL, '1.0', true);
   wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
   wp_enqueue_style('google-font-two', '//fonts.googleapis.com/css?family=PT+Sans&display=swap');
   wp_enqueue_style('kenny_main_style', get_stylesheet_uri());
@@ -33,6 +33,7 @@ add_action('wp_enqueue_scripts', 'kenny_files');
 
 function kenny_features() {
   //add_theme_support( 'woocommerce' );
+  register_nav_menu('headerMenuLocation', 'Header Menu Location');
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_image_size('contestant-photo', 400, 500, false);
@@ -47,5 +48,6 @@ function load_dashicons_front_end() {
 wp_enqueue_style( 'dashicons' );
 }
 
+add_filter( 'woocommerce_product_description_heading', '__return_null' );
 
 ?>

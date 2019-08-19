@@ -27,6 +27,9 @@
   <?php pageBanner(); ?>
   
   <div class="content-container"> 
+    <div class="giveaway-buttons">
+      <a id="arrow" class="myButton" href="<?php echo site_url('giveaways');?>"><i class="fas fa-arrow-left"></i>  Back to All Giveaways</a>
+    </div>
     <h2>Giveaway Ends On: <?php echo $eventDate->format('M j, Y'); ?> </h2> 
     <div class="giveaway-image-content">
       <?php if(!empty($image)){ ?>

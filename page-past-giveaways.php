@@ -3,6 +3,9 @@
 
   <?php pageBanner(); ?>
   <div class="content-container"> 
+    <div class="giveaway-buttons">
+      <a id="arrow" class="myButton" href="<?php echo site_url('giveaways');?>"><i class="fas fa-arrow-left"></i>  Back to All Giveaways</a>
+    </div>
 
     <?php
   
@@ -26,21 +29,26 @@
     while($pastGiveaways->have_posts()) {
       $pastGiveaways->the_post(); ?>
 
-      <!-- format the html and data below -->
-      <h3><?php the_title();?> </h3>
-      <h4> End Date: <?php 
-        $pastGiveawayDate = new DateTime(get_field('giveaway_date'));
-        echo $pastGiveawayDate->format('M'); echo ' ';
-        echo $pastGiveawayDate->format('d'); echo ', ';
-        echo $pastGiveawayDate->format('Y');
-      ?>
-      </h4><?php if(has_excerpt()) {
-        echo get_the_excerpt();
-      } else {
-        echo wp_trim_words(get_the_content(), 25); 
-      }?>
-      
-      <hr>
+    <div class="giveaway-card">
+      <div class="giveaway-title-date">
+        <h3><?php the_title();?> </h3>
+        <h4> End Date: <?php 
+          $pastGiveawayDate = new DateTime(get_field('giveaway_date'));
+          echo $pastGiveawayDate->format('M'); echo ' ';
+          echo $pastGiveawayDate->format('d'); echo ', ';
+          echo $pastGiveawayDate->format('Y');
+        ?>
+        </h4>
+      </div>
+        
+        <?php if(has_excerpt()) {
+          echo get_the_excerpt();
+        } else {
+          echo wp_trim_words(get_the_content(), 25); 
+        }?>
+    </div>
+        
+        <hr>
 
     <?php }
     ?>
