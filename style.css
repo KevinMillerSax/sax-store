@@ -549,7 +549,7 @@ thead {
 
 @media(max-width: 600px) {
 	p {
-		font-size: 11px;
+		font-size: 16px;
 	}
 
 	h1 {
@@ -557,7 +557,7 @@ thead {
 	}
 	
 	h2 {
-		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+		font-size: calc(22px + 6 * ((100vw - 320px) / 680));
 	}
 	
 	#burger-nav{
@@ -580,15 +580,28 @@ thead {
 		justify-content: center;
 		width: 98vw;
 		margin-bottom: 20px;
+		margin-top: 10px;
 	}
 	.catalog-right {
 		display: flex;
 		justify-content: center;
 		width: 98vw;
 	}
+
+	.contestant-image {
+		width: 40%;
+		margin-right: 5px;
+	}
 	#drop-menu {
 		display: none;
 		width: 100%;
+	}
+
+	.giveaway-buttons {
+		display:flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding-bottom: 2vh;
 	}
 
 	.menu-main-menu-container {
@@ -638,6 +651,64 @@ thead {
 		 
 	 }
 
+	 .soprano {
+		 display:none;
+	 }
+
+	 /* woocommerce */
+
+	 .products {
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	 }
+
+	 .woocommerce-LoopProduct-link {
+		width: 250px;
+	 }
+
+	 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3{
+		 font-size: 27px;
+	 }
+
+	 .woocommerce ul.products li.product .price {
+		 font-size: 20px;
+	 }
+
+	 .woocommerce ul.products li.product .button {
+		font-size: 20px;
+	 }
+
+	 .woocommerce-result-count {
+		 font-size: 18px;
+	 }
+
+	 .woocommerce .woocommerce-ordering select {
+		 font-size: 12px;
+		 width: 77vw;
+	 }
+
+	 .woocommerce-product-details__short-description p{
+		 font-size: 14px;
+	 }
+
+	 #tab-description p {
+		 font-size: 14px;
+	 }
+	 .woocommerce div.product form.cart{
+		 margin-top: 20px;
+	 }
+	 .woocommerce .quantity .qty {
+		 font-size: 4vw;
+	 }
+	 /* end woocommerce */
+
+
+	 .single-page-banner {
+		 display: none;
+	 }
+
 	 .media-front-video {
 		padding: 7px;
 		display: flex;
@@ -658,7 +729,14 @@ thead {
 		 text-align: center;
 		 margin:0;
 	 }
-
+	 .myButton {
+		 font-size: 16px;
+	 }
+	 .giveaway-excerpt-button > a  {
+		 width: 100px;
+		 margin-top: 15px;
+	 }
+	 
 	 .aws-container .aws-search-field {
 		 width: 80vw;
 	 }
