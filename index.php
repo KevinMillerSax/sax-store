@@ -5,8 +5,11 @@ while(have_posts()) {
   the_post(); ?>
 
   <?php pageBanner(); ?>
+
+  <div class="content-container"> 
+    <?php the_content(); ?>
   
-  <div class="content-container"> <?php the_content(); ?></div>
+  </div>
 
 <?php } ?>
 <?php get_footer(); ?>

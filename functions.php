@@ -8,7 +8,7 @@ function pageBanner($args = NULL) {
     if (get_field('page_banner_background_image')) {
       $args['photo'] = get_field('page_banner_background_image')['sizes']['page-banner'];
     } else {
-      $args['photo'] = get_theme_file_uri('images/sax-banner3.jpg');
+      $args['photo'] = get_theme_file_uri('images/sax.jpg');
     }
   }
   ?>
@@ -38,7 +38,6 @@ function kenny_features() {
   add_theme_support('post-thumbnails');
   add_image_size('contestant-photo', 400, 500, false);
   add_image_size('page-banner', 1500, 350, true);
-  
 }
 add_action('after_setup_theme', 'kenny_features');
 

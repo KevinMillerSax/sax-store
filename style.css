@@ -11,11 +11,11 @@ body {
   color: white;
 	/* font-family: 'Barlow Condensed', sans-serif;   */
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	background: linear-gradient(to right,rgb(42, 12, 2) 15%, rgb(181, 86, 7), rgb(250, 154, 15) 90%, rgb(85, 50, 38));
+	background: linear-gradient(to right,rgb(42, 12, 2) 15%, rgb(181, 86, 7), rgb(204, 122, 8) 90%, rgb(85, 50, 38));
 	background-position: center;
 	background-size: cover;
 	/* text-shadow: -1.5px 1.5px 7px black; */
-	
+
 }
 
 p {
@@ -51,10 +51,36 @@ h2 {
 	font-size: calc(20px + 6 * ((100vw - 320px) / 680));
 }
 
-.aws-container .aws-search-field {
-	width: 30vw;	
+li.current-menu-item {
+	text-decoration-line: underline;
 }
 
+.aws-container .aws-search-field {
+	width: 30vw;
+}
+
+.blog-card {
+	border-radius: 4px;
+	padding: 0px 15px 15px 15px;
+	background-color: rgba(44,37, 29, 0.52);
+	box-shadow: 4px 4px 8px 2px rgba(49, 25, 15, 0.3);
+	margin-bottom: 20px;
+}
+
+.blog-card h2 {
+	margin: 0;
+}
+
+.blog-card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 3vh;
+}
+
+.blog-button {
+	margin-top: 3vh;
+}
 
 #cart :before {
 	font-family: "dashicons";
@@ -66,10 +92,9 @@ h2 {
 	content: "\f174";
 	}
 
-.catalogs {
+/* .catalogs {
 	display:flex;
 	justify-content: space-between;
-	/* align-content: center; */
 }
 
 .catalog-left {
@@ -90,14 +115,13 @@ h2 {
 }
 
 .catalog-right img {
-	width: 80%;	
+	width: 80%;
 	margin: 0 auto;
-}
+} */
 
 
 .content-container {
   margin: 5vh 12vw 10vh 12vw;
-  
 }
 
 .contestant-card {
@@ -138,7 +162,6 @@ h2 {
 	display: flex;
 	flex-wrap: wrap;
 	padding-inline-start: 0px;
-  
 }
 
 .menu-main-menu-container > ul > li {
@@ -156,13 +179,14 @@ h2 {
 }
 
 .footer-inner-container {
+	padding-top: 6px;
 	display: flex;
 	justify-content: space-around;
-	align-items: baseline;
+	/* align-items: baseline; */
+	align-items: center;
 	margin: 0 auto;
 	width: 80vw;
 	color: black;
-	
 }
 
 .footer-nav {
@@ -219,12 +243,12 @@ header {
   /* position: fixed; */
   /* position: -webkit-sticky; */
 	/* position: sticky; */
-	
-	
+
+
   top: 0;
-  z-index: 1000; 
+  z-index: 1000;
   width: 100%;
-	height: 160px; 
+	height: 160px;
 	box-shadow: 1px 1px 20px 3px rgb(44,37, 29);
 }
 
@@ -252,7 +276,6 @@ header div h1 {
   list-style: none;
 	display: flex;
 	padding-inline-start: 0px;
-  
 }
 
 .main-navigation > ul > li {
@@ -321,7 +344,6 @@ header div h1 {
 	padding-top: 4vh;
 	display: flex;
 	flex-direction: column;
-	
 }
 
 .single-page-banner {
@@ -342,8 +364,28 @@ header div h1 {
 .single-page-banner > h1 {
 	margin-block-start: inherit;
   margin-left: 12vw;
-  padding-top: 10vh; 
+  padding-top: 10vh;
 	font-size: 4.5vw;
+}
+
+.songs-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.three-songs {
+	margin: 20px;
+	text-align: center;
+	border-radius: 4px;
+	padding: 8px;
+	background-color: rgba(44,37, 29, 0.52);
+	box-shadow: 4px 4px 8px 2px rgba(49, 25, 15, 0.3);
+}
+
+.two-videos {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 3vh;
 }
 
 .video-container {
@@ -353,7 +395,6 @@ header div h1 {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	
 }
 
 
@@ -432,7 +473,7 @@ header div h1 {
 	display: flex;
 	justify-content: space-around;
 	border-radius: 4px;
-	padding: 15px; 
+	padding: 15px;
 	background-color: rgba(44,37, 29, 0.52);
 	box-shadow: 4px 4px 8px 2px rgba(49, 25, 15, 0.3);
 	margin-bottom: 5vh;
@@ -445,7 +486,11 @@ header div h1 {
 }
 
 thead {
-	background-color: rgba(44,37, 29, 0.52);	
+	background-color: rgba(44,37, 29, 0.52);
+}
+
+.woocommerce ul.products li.product .button {
+	height: auto;
 }
 
 .woocommerce table.shop_table th {
@@ -499,9 +544,11 @@ thead {
 /* front page slider  */
 
 @keyframes fader {
-	0%{background: url(images/kandinsky.jpeg); background-size:cover;}
-	50%{background: url(images/kandinsky2.jpg); background-size:cover;}
-	100%{background: url(images/kandinsky.jpeg); background-size:cover;}
+	0%{background: url(images/kenny1.jpg); background-size:cover;}
+	25%{background: url(images/kenny2.jpg); background-size:cover;}
+	50%{background: url(images/kenny3.jpg); background-size:cover;}
+	75%{background: url(images/kenny2.jpg); background-size:cover;}
+	100%{background: url(images/kenny1.jpg); background-size:cover;}
 }
 
 
@@ -518,7 +565,7 @@ thead {
 .page-banner__content {
 	text-align: center;
 	height: 350px;
-	animation: fader 10s cubic-bezier(1, 0, 0, 1) infinite;
+	animation: fader 11s linear infinite;
 }
 
 
@@ -567,12 +614,11 @@ thead {
 		cursor: pointer;	
 	}
 
-	.catalogs {
+	/* .catalogs {
 		display:flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		/* align-content: center; */
 	}
 
 	.catalog-left {
@@ -586,7 +632,7 @@ thead {
 		display: flex;
 		justify-content: center;
 		width: 98vw;
-	}
+	} */
 
 	.contestant-image {
 		width: 40%;

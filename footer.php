@@ -10,15 +10,17 @@
           <ul class="footer-nav">
             <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
             <li><a href="<?php echo site_url('/warranty');?>">Warranty</a></li>
-            <li><a href="<?php echo site_url('/credit-program');?>">Credit Program</a></li>
             <li><a href="<?php echo site_url('/public-notice');?>">Public Notice</a></li>
           </ul>
+        </div>
+        <div class="footer-column">
+          <a href="https://smile.amazon.com/ref=smi_ext_ch_80?_encoding=UTF8&ein=80-0883688&ref_=smi_chpf_redirect&ref_=smi_ext_ch_80-0883688_cl"><img src="<?php echo get_theme_file_uri('images/amazon2.png');?>" alt="amazon"></a>
         </div>
       </div>
     </div>
 
   </footer>
-  
+
 
 
 <?php wp_footer(); ?>
